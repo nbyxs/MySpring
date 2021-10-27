@@ -22,6 +22,11 @@ public class User {
 
        return new User(1,"111");
     }
+//    @Bean
+//    public  User init1(){
+//
+//        return new User(1,"211");
+//    }
 
     public Integer getId() {
         return id;
