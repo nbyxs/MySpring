@@ -10,5 +10,8 @@ public class urlController {
     public String hello(){
         return "hello springMVC!";
     }
-
+    @RequestMapping("/")
+    public String hello1(){
+        return "hello springMVC!";
+    }
 }
