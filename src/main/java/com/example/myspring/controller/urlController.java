@@ -1,6 +1,7 @@
 package com.example.myspring.controller;
 
 
+import com.example.myspring.bean.User;
 import com.example.myspring.ioc.annotations.Component;
 import com.example.myspring.mvc.annotations.RequestMapping;
 
@@ -10,8 +11,9 @@ public class urlController {
     public String hello(){
         return "hello springMVC!";
     }
-    @RequestMapping("/")
+    @RequestMapping("/hello")
     public String hello1(){
-        return "hello springMVC!";
+        return "hello my own springMVC!";
     }
+
 }

@@ -44,6 +44,25 @@
             <artifactId>jetty-servlet</artifactId>
             <version>9.2.15.v20160210</version>
         </dependency>
+        <!-- tomcat-->
+
+        <!-- https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-core -->
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-core</artifactId>
+            <version>8.5.23</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-websocket</artifactId>
+            <version>9.0.52</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+                 <artifactId>tomcat-juli</artifactId>
+                <version>9.0.52</version>
+             </dependency>
+
         <!-- yaml解析 -->
         <dependency>
             <groupId>org.yaml</groupId>

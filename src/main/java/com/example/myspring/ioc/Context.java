@@ -99,7 +99,7 @@ public class Context {
                          *         return new User(1,"211");
                          *     }
                          */
-                           if(BeansPool.getInstance().getList_register().contains(class_name))
+                           if(beansPool.getList_register().contains(class_name))
                                throw new creatException("多个配置类对同一个类"+class_name+"生成多个对象！");
 
                            log.info("Created bean for [{}] by method [{}]", class_name, m.getName());

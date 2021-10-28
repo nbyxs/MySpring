@@ -1,6 +1,8 @@
 package com.example.myspring.exception;
 
-public class requestException extends Exception {
+import java.rmi.ServerException;
+
+public class requestException extends ServerException {
     public requestException(String message) {
         super(message);
     }
