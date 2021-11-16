@@ -37,6 +37,8 @@ public class Context {
     public static void init() throws IllegalAccessException, InstantiationException, InvocationTargetException, creatException {
 
         List<Class> list= PackageListUtils.getAllClass();
+        System.out.println(list.toString());
+        System.out.println("__________________+");
 
         //Component和Configuration在类上使用
         for(Class c:list){

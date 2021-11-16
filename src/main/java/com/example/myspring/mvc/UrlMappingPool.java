@@ -14,6 +14,7 @@ public class UrlMappingPool {
 
     private static UrlMappingPool urlMappingPool;
 
+
     public static UrlMappingPool getInstance() {
         if (urlMappingPool == null)
             urlMappingPool = new UrlMappingPool();
