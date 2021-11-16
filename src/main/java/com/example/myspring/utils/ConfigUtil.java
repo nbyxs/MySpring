@@ -26,7 +26,7 @@ public class ConfigUtil {
         if (!file.exists()) {
             Map<String, Object> map = new HashMap<>();
             map.put("server", "Tomcat");
-            map.put("port", 5200);
+            map.put("port", 8899);
             return map;
         }
         try {

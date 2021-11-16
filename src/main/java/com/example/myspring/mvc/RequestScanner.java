@@ -28,10 +28,14 @@ public class RequestScanner {
                     RequestMapping requestMapping = method.getAnnotation(RequestMapping.class);
 
                     String methodUrl = requestMapping.value();
-                    RequestMethod requestMethod = requestMapping.method(); // 只看方法上的HTTP METHOD
-                    MethodDetail detail=urlMappingPool.getMap(methodUrl,requestMethod);
+                    RequestMethod requestMethod = requestMapping.method();
+                    // 只看方法上的HTTP METHOD
 
-                    if(detail!=null){
+                    //查询请求路径和请求方法 对应的方法是否已有处理方法
+                    MethodDetail detail_exist=urlMappingPool.getMap(methodUrl,requestMethod);
+
+
+                    if(detail_exist!=null){
                         throw new requestException("多个方法请求路径和提交方法与"+c.getName()+":"+method.getName()+"重复");
                     }
 

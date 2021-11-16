@@ -22,6 +22,7 @@ public class UrlMappingPool {
 
     private List<MethodDetail> methodDetails = new ArrayList<>();
 
+
     public MethodDetail getMap(String url, RequestMethod requestMethod) {
         for (MethodDetail methodDetail : methodDetails) {
             if (methodDetail.getUrl().equals(url) && methodDetail.getRequestMethod() == requestMethod)
@@ -39,10 +40,9 @@ public class UrlMappingPool {
                 .build();
 
         methodDetails.add(methodDetail);
+
     }
 
-    public void setMap(String url, MethodDetail methodDetail) {
-        methodDetails.add(methodDetail);
-    }
+
 
 }

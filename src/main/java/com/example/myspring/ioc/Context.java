@@ -32,6 +32,7 @@ import java.util.Map;
  */
 @Slf4j
 public class Context {
+    //创建ioc容器
     static  BeansPool beansPool=BeansPool.getInstance();
     public static void init() throws IllegalAccessException, InstantiationException, InvocationTargetException, creatException {
 

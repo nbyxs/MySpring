@@ -19,9 +19,13 @@ import java.util.Objects;
 @Builder
 public class MethodDetail {
 
+    //请求路径
     private String url;
+    //请求方法(post,get...)
     private RequestMethod requestMethod;
+    //对应的处理类
     private Class clazz;
+    //处理类对应方法
     private Method method;
 
     @Override

@@ -8,6 +8,7 @@ import java.util.regex.Matcher;
 
 /**
  * 获取环境变量下的所有的包下面的所有的class
+ * jar包扫描并选出.class后缀名的类，并采取单例模式创建存储class名集合
  *
  * @author hourui 2017/10/18 19:37
  */
@@ -17,10 +18,14 @@ public class PackageListUtils {
     private static String separator = File.separator; // 分隔符
     private static List<Class> classes;
 
+
+//单例模式创建 classes
     public static List<Class> getAllClass() {
-        root = new File(root).getPath(); // 更换CLASSPATH的样式
-        classes = new ArrayList<>();
-        listFilesForFolder(new File(root));
+        if(classes==null){
+            root = new File(root).getPath(); // 更换CLASSPATH的样式
+            classes = new ArrayList<>();
+            listFilesForFolder(new File(root));
+        }
         return classes;
     }
 

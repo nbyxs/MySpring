@@ -41,13 +41,13 @@ public class TomcatServer extends HttpServlet {
     }
 
     @Override
-    public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public void service(HttpServletRequest request, HttpServletResponse response) throws IOException {
         RequestMethod method= RequestMethod.getEnum(request.getMethod());
         if(method==null){
-            log.info(request.getMethod()+"请求方法未知！");
+            log.info(request.getMethod()+"请求方法无法处理！");
         }
         String url=request.getRequestURI();
-        log.info("{} {}", method, url);
+        log.info("正在以{}方式发送{}请求", method, url);
         MethodDetail methodDetail = UrlMappingPool.getInstance().getMap(url, method);
         // 如果找不到对应的匹配规则
         if (methodDetail == null) {
@@ -71,6 +71,7 @@ public class TomcatServer extends HttpServlet {
         List<String> params = new ArrayList<>(); // 最终的方法参数
         Method method_controller = methodDetail.getMethod();
         Parameter[] parameters=method_controller.getParameters();
+        //遍历请求方法中的参数以及参数注解
         for(Parameter parameter:parameters){
             String name=null;
             Annotation[] annotations=parameter.getAnnotations();
