@@ -12,8 +12,7 @@ import java.util.Objects;
 
 /**
  * 读取配置文件的信息
- *
- * @author hourui 2017/11/6 22:42
+
  */
 public class ConfigUtil {
 

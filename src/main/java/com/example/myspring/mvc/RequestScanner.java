@@ -8,6 +8,15 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.lang.reflect.Method;
 import java.util.List;
+/**
+ *
+ *
+ * @author nbyxs
+ * @date 2021/11/17 11:46
+ * @param
+ * @return
+ * 请求映射处理
+ */
 
 @Slf4j
 public class RequestScanner {

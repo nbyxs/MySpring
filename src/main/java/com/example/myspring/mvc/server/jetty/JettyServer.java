@@ -26,9 +26,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * @author hourui 2017/11/1 22:26
- */
+
 @Slf4j
 public class JettyServer {
 

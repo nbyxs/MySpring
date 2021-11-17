@@ -7,7 +7,10 @@ import org.junit.Test;
 
 import java.lang.reflect.Proxy;
 
-public class test {
+/**
+ * 测试aop
+ */
+public class test_aop {
 
     public static void main(String[] args) throws aopException {
         aopScanner.init();

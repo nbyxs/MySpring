@@ -7,10 +7,15 @@ import java.util.Objects;
 import java.util.regex.Matcher;
 
 /**
- * 获取环境变量下的所有的包下面的所有的class
- * jar包扫描并选出.class后缀名的类，并采取单例模式创建存储class名集合
  *
- * @author hourui 2017/10/18 19:37
+ *
+ * @author nbyxs
+ * @date 2021/11/17 11:45
+ * @param
+ * @return
+ *  获取环境变量下的所有的包下面的所有的class
+ *  jar包扫描并选出.class后缀名的类，并采取单例模式创建存储class名集合
+ *
  */
 public class PackageListUtils {
 

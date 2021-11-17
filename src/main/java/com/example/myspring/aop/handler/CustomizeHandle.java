@@ -12,7 +12,15 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.List;
-
+/**
+ *  
+ * 
+ * @author nbyxs
+ * @date 2021/11/17 11:35
+ * @param 
+ * @return
+ * 反射实现
+ */
 public class CustomizeHandle implements InvocationHandler {
      private static List<methodList> lists=null;
     private final static Logger LOGGER = LoggerFactory.getLogger(CustomizeHandle.class);

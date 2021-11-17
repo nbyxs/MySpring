@@ -1,7 +1,15 @@
 package com.example.myspring.aop;
 
 import java.lang.reflect.Method;
-
+/**
+ *
+ *
+ * @author nbyxs
+ * @date 2021/11/17 11:39
+ * @param
+ * @return
+ * 规定：对同一方法进行切入的before after需在一个类中，且要static修饰（省去为类生成实例）
+ */
 public class methodList {
     private Method method_pointcut;//切入的方法
     private Method method_before;//before切入点

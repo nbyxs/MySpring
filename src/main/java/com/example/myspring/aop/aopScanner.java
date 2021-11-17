@@ -10,7 +10,15 @@ import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
 import java.util.List;
 
-
+/**
+ *
+ *
+ * @author nbyxs
+ * @date 2021/11/17 11:30
+ * @param
+ * @return
+ * 扫描class查询before after 以及要切入的方法和对应类 并加入集合
+ */
 public class aopScanner {
 
     public static  void init() throws aopException {
@@ -29,6 +37,7 @@ public class aopScanner {
 
 
                 //获取方法中的内容（规定内容必须相同，为对应要处理的方法）
+                //before after方法必须由static
                 String name1=search(method_before,Before.class);
                 String name2=search(method_after,After.class);
                 System.out.println(name1+"  "+name2);
@@ -56,7 +65,15 @@ public class aopScanner {
 
     }
 
-
+/**
+ *
+ *
+ * @author nbyxs
+ * @date 2021/11/17 11:38
+ * @param  classes, name1, method_before, method_after, bClass
+ * @return com.example.myspring.aop.methodList
+ * 封装 before after pointcut pointcut方法对应类 before after方法对应类
+ */
 
     private static methodList search(List<Class> classes, String name1,Method method_before, Method method_after,Class bClass) {
        // System.out.println(method_before.toString());
