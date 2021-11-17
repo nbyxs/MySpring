@@ -3,7 +3,6 @@ package com.example.myspring.aop;
 import com.example.myspring.aop.annotations.After;
 import com.example.myspring.aop.annotations.Aspect;
 import com.example.myspring.aop.annotations.Before;
-import com.example.myspring.aop.annotations.Pointcut;
 import com.example.myspring.exception.aopException;
 import com.example.myspring.utils.PackageListUtils;
 
@@ -36,7 +35,7 @@ public class aopScanner {
                 if(!name1.equals(name2)){
                     throw  new aopException("一个切面类的方法只能对同一个方法进行切面处理!");
                 }
-               methodList method_point= search(classes,name1,method_before,method_after);
+               methodList method_point= search(classes,name1,method_before,method_after,c);
 
                 //查询对应方法是否存在
                 if(method_point==null){
@@ -48,25 +47,25 @@ public class aopScanner {
                 }
                 //添加方法和切面类
                 methodLists.add(method_point);
-                System.out.println(method_point.toString());
+              //  System.out.println(method_point.toString());
             }
         }
         methodPool.setMethodLists(methodLists);
-        System.out.println(methodPool.getMethodLists().toString());
+       // System.out.println(methodPool.getMethodLists().toString());
 
     }
 
 
 
-    private static methodList search(List<Class> classes, String name1,Method method_before, Method method_after) {
-        System.out.println(method_before.toString());
+    private static methodList search(List<Class> classes, String name1,Method method_before, Method method_after,Class bClass) {
+       // System.out.println(method_before.toString());
         for(Class c:classes){
             Method[] methods=c.getMethods();
             for(Method m:methods){
                // System.out.println(m.toString()+" -");
                 if(m.toString().equals(name1)){
 
-                    return new methodList(m,method_before,method_after,c);
+                    return new methodList(m,method_before,method_after,c,bClass);
 //                    System.out.println("search  "+methodList.toString());
                 }
             }

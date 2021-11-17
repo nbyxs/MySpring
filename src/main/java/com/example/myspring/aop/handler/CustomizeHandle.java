@@ -18,6 +18,7 @@ public class CustomizeHandle implements InvocationHandler {
     private final static Logger LOGGER = LoggerFactory.getLogger(CustomizeHandle.class);
 
     private Object target;
+    private  Object advise;
 
     public CustomizeHandle() {
     }
@@ -25,10 +26,8 @@ public class CustomizeHandle implements InvocationHandler {
     public CustomizeHandle(Class clazz) {
         try {
             this.target = clazz.newInstance();
-        } catch (InstantiationException e) {
-            LOGGER.error("InstantiationException", e);
-        } catch (IllegalAccessException e) {
-            LOGGER.error("IllegalAccessException",e);
+        } catch (IllegalAccessException | InstantiationException e) {
+            e.printStackTrace();
         }
     }
 
@@ -40,8 +39,8 @@ public class CustomizeHandle implements InvocationHandler {
        methodList methodList=null;
 
        for(methodList l:lists){
-           System.out.println(l.toString());
-           System.out.println(l.getMethod_pointcut().toString());
+          // System.out.println(l.toString());
+          // System.out.println(l.getMethod_pointcut().toString());
 
            if(l.getMethod_pointcut().toString().equals(method.toString())){
                methodList=l;
@@ -50,23 +49,25 @@ public class CustomizeHandle implements InvocationHandler {
 
         //获取methodList信息 处理before 和 after
        if(methodList==null)throw new aopException("切面类为空！");
-        before(methodList.getMethod_before());
+        before(methodList.getMethod_before(),methodList.getbClass());
         Object result = method.invoke(target, args);
-        after(methodList.getMethod_after());
+        after(methodList.getMethod_after(),methodList.getbClass());
 
         LOGGER.info("proxy class={}", proxy.getClass());
         return result;
     }
 
 
-    private Object before(Method method_before) throws InvocationTargetException, IllegalAccessException {
-      if(method_before==null)return null;
-       return method_before.invoke(method_before.getClass(), (Object) method_before.getParameters());
+    private void before(Method method_before,Class bClass) throws InvocationTargetException, IllegalAccessException {
+      if(method_before==null)return ;
+      //  System.out.println(bClass.toString()+"asaa");
+        method_before.invoke(bClass, null);
     }
 
-    private Object after(Method method_after) throws InvocationTargetException, IllegalAccessException {
-        if(method_after==null)return null;
-     return    method_after.invoke(method_after.getClass(),method_after.getParameters());
+    private void after(Method method_after,Class bClass) throws InvocationTargetException, IllegalAccessException {
+        if(method_after==null)return ;
+      //  System.out.println(bClass.toString()+"   dd");
+         method_after.invoke(bClass, null);
     }
 
 

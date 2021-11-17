@@ -6,13 +6,15 @@ public class methodList {
     private Method method_pointcut;//切入的方法
     private Method method_before;//before切入点
     private  Method method_after;//after切入点
-    Class aClass;//切入方法对应类
+    Class aClass;//需要切入方法对应类
+    Class bClass;//before after对应类（反射执行需要对应类）
 
-    public methodList(Method method_pointcut, Method method_before, Method method_after, Class aClass) {
+    public methodList(Method method_pointcut, Method method_before, Method method_after, Class aClass,Class bClass) {
         this.method_pointcut = method_pointcut;
         this.method_before = method_before;
         this.method_after = method_after;
         this.aClass = aClass;
+        this.bClass=bClass;
     }
 
 
@@ -60,5 +62,13 @@ public class methodList {
 
     public void setaClass(Class aClass) {
         this.aClass = aClass;
+    }
+
+    public Class getbClass() {
+        return bClass;
+    }
+
+    public void setbClass(Class bClass) {
+        this.bClass = bClass;
     }
 }

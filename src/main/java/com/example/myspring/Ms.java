@@ -13,7 +13,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
 
 public class Ms {
-    public static void run() throws IllegalAccessException, InvocationTargetException, InstantiationException, creatException, requestException, LifecycleException {
+    public static void run() throws IllegalAccessException, InvocationTargetException, InstantiationException, creatException, requestException, LifecycleException, ClassNotFoundException {
         Context.init();
         RequestScanner.init();
         Map<String, Object> config = ConfigUtil.getConfig();

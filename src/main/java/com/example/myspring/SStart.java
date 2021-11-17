@@ -13,7 +13,7 @@ import java.util.Map;
  * 启动类
  */
 public class SStart {
-    public static void main(String[] args) throws IllegalAccessException, InstantiationException, InvocationTargetException, creatException, requestException, LifecycleException {
+    public static void main(String[] args) throws IllegalAccessException, InstantiationException, InvocationTargetException, creatException, requestException, LifecycleException, ClassNotFoundException {
         Ms.run();
         User user = (User) BeansPool.getBeansPool().getMap().get(User.class);
         System.out.println(user.toString());

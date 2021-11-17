@@ -34,7 +34,7 @@ import java.util.Map;
 public class Context {
     //创建ioc容器
     static  BeansPool beansPool=BeansPool.getInstance();
-    public static void init() throws IllegalAccessException, InstantiationException, InvocationTargetException, creatException {
+    public static void init() throws IllegalAccessException, InstantiationException, InvocationTargetException, creatException, ClassNotFoundException {
 
         List<Class> list= PackageListUtils.getAllClass();
         System.out.println(list.toString());
