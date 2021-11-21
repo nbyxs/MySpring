@@ -6,7 +6,15 @@
 
     <groupId>com.myspring.mvc</groupId>
     <artifactId>MySpring</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>spring-ioc</module>
+        <module>spring-aop</module>
+        <module>spring-start</module>
+        <module>spring-common</module>
+        <module>spring-mvc</module>
+    </modules>
     <dependencies>
         <!-- 日志 -->
         <dependency>
