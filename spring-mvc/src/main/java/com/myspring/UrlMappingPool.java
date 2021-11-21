@@ -1,7 +1,7 @@
-package com.myspring.mvc;
+package com.myspring;
 
 
-import com.myspring.mvc.enums.RequestMethod;
+import com.myspring.enums.RequestMethod;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;

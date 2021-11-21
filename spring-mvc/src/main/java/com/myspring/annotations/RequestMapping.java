@@ -1,8 +1,8 @@
-package com.myspring.mvc.annotations;
+package com.myspring.annotations;
 
 
 
-import com.myspring.mvc.enums.RequestMethod;
+import com.myspring.enums.RequestMethod;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

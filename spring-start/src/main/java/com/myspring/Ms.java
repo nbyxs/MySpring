@@ -3,9 +3,8 @@ package com.myspring;
 import com.myspring.exception.creatException;
 import com.myspring.exception.requestException;
 import com.myspring.ioc.Context;
-import com.myspring.mvc.RequestScanner;
-import com.myspring.mvc.server.jetty.JettyServer;
-import com.myspring.mvc.server.tomcat.MyTomcat;
+import com.myspring.server.jetty.JettyServer;
+import com.myspring.server.tomcat.MyTomcat;
 import com.myspring.utils.ConfigUtil;
 import org.apache.catalina.LifecycleException;
 

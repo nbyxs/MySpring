@@ -1,4 +1,4 @@
-package com.myspring.mvc.enums;
+package com.myspring.enums;
 
 public enum RequestMethod {
 

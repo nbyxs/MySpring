@@ -1,7 +1,7 @@
-package com.myspring.mvc.server.nio;
+package com.myspring.server.nio;
 
 
-import com.myspring.mvc.enums.RequestMethod;
+import com.myspring.enums.RequestMethod;
 import com.myspring.utils.Constants;
 import lombok.extern.slf4j.Slf4j;
 

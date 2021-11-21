@@ -1,6 +1,6 @@
-package com.myspring.mvc.server.nio;
+package com.myspring.server.nio;
 
-import com.myspring.mvc.enums.RequestMethod;
+import com.myspring.enums.RequestMethod;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

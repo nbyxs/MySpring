@@ -1,8 +1,8 @@
-package com.myspring.mvc;
+package com.myspring;
 
 import com.myspring.exception.requestException;
-import com.myspring.mvc.annotations.RequestMapping;
-import com.myspring.mvc.enums.RequestMethod;
+import com.myspring.annotations.RequestMapping;
+import com.myspring.enums.RequestMethod;
 import com.myspring.utils.PackageListUtils;
 import lombok.extern.slf4j.Slf4j;
 

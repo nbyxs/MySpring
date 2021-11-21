@@ -1,4 +1,4 @@
-package com.myspring.mvc.server.tomcat;
+package com.myspring.server.tomcat;
 
 import org.apache.catalina.Context;
 import org.apache.catalina.LifecycleException;

@@ -1,7 +1,7 @@
-package com.myspring.mvc;
+package com.myspring;
 
 
-import com.myspring.mvc.enums.RequestMethod;
+import com.myspring.enums.RequestMethod;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;

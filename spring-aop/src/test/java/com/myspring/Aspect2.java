@@ -13,12 +13,6 @@ public class Aspect2 {
         System.out.println("[Aspect2] before advise");
     }
 
-
-
-
-
-
-
     @After("public abstract void com.myspring.dao.ISubject.execute()")
     public static void after() {
         System.out.println("[Aspect2] after advise");
